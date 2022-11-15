@@ -1,10 +1,12 @@
-function ExpenseItem() {
+import "./ExpenseItem.css";
+
+function ExpenseItem(propsdata) {
   return (
-    <div>
-      <div>Mar 20th 2022</div>
-      <div>
-        <h2>Car Insurance</h2>
-        <div>$235.45</div>
+    <div className="expense-item">
+      
+      <div className="expense-item__description">
+        <h2>{propsdata.title}</h2>
+        <div className="expense-item__price">${propsdata.amount}</div>
       </div>
     </div>
   );
